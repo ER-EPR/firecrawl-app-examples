@@ -4,7 +4,7 @@ from typing import Dict, Any, Callable, Optional
 class FirecrawlClient:
     """Client for interacting with the Firecrawl API."""
 
-    def __init__(self, api_key: str):
+    def __init__(self, api_key: str, api_url: str):
         """Initialize the Firecrawl client with an API key.
 
         Args:
@@ -12,7 +12,7 @@ class FirecrawlClient:
         """
         from firecrawl import FirecrawlApp
 
-        self.client = FirecrawlApp(api_key=api_key)
+        self.client = FirecrawlApp(api_key=api_key,api_url=api_url)
 
     def deep_research(
         self,
