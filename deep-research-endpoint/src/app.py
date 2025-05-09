@@ -50,7 +50,7 @@ def perform_research(query: str, config: Dict[str, Any]):
         st.session_state.processing = True
 
         # Initialize Firecrawl client
-        client = FirecrawlClient(config["api_key"])
+        client = FirecrawlClient(config["api_key"],config["api_url"])
 
         # Perform deep research
         results = client.deep_research(
