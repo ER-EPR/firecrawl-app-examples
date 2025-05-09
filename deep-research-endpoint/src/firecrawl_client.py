@@ -44,7 +44,7 @@ class FirecrawlClient:
 
         # Run deep research
         results = self.client.deep_research(
-            query=query, params=params, on_activity=on_activity
+            query=query, max_depth=max_depth, time_limit=timeout_limit, max_urls=max_urls, on_activity=on_activity
         )
 
         # Format the results into a consistent structure for our application
