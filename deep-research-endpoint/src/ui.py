@@ -17,6 +17,11 @@ def setup_sidebar() -> Dict[str, Any]:
         type="password",
         help="Your Firecrawl API key for authentication. You can obtain this from the Firecrawl dashboard.",
     )
+    api_url = st.sidebar.text_input(
+        "Enter your Firecrawl API Url",
+        type="default",
+        help="Your Firecrawl API url for self hosted server. official: https://api.firecrawl.dev.",
+    )
 
     st.sidebar.markdown("### Research Parameters")
 
