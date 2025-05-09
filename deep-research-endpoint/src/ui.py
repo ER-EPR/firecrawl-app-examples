@@ -66,6 +66,7 @@ def setup_sidebar() -> Dict[str, Any]:
         "max_depth": max_depth,
         "timeout_limit": timeout_limit,
         "max_urls": max_urls,
+        "api_url": api_url,
     }
 
 
