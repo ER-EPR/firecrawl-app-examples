@@ -15,11 +15,13 @@ def setup_sidebar() -> Dict[str, Any]:
     api_key = st.sidebar.text_input(
         "Enter your Firecrawl API Key",
         type="password",
+        placeholder="123456",
         help="Your Firecrawl API key for authentication. You can obtain this from the Firecrawl dashboard.",
     )
     api_url = st.sidebar.text_input(
         "Enter your Firecrawl API Url",
         type="default",
+        placeholder="http://host.docker.internal:3002",
         help="Your Firecrawl API url for self hosted server. official: https://api.firecrawl.dev.",
     )
 
