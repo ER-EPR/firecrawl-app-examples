@@ -21,7 +21,7 @@ def setup_sidebar() -> Dict[str, Any]:
     api_url = st.sidebar.text_input(
         "Enter your Firecrawl API Url",
         type="default",
-        placeholder="http://host.docker.internal:3002",
+        placeholder="https://firecrawl.savorcare.com",
         help="Your Firecrawl API url for self hosted server. official: https://api.firecrawl.dev.",
     )
 
