@@ -16,13 +16,15 @@ def setup_sidebar() -> Dict[str, Any]:
         "Enter your Firecrawl API Key",
         type="password",
         placeholder="123456",
+        value="123456",
         help="Your Firecrawl API key for authentication. You can obtain this from the Firecrawl dashboard.",
     )
     api_url = st.sidebar.text_input(
         "Enter your Firecrawl API Url",
         type="default",
-        placeholder="https://firecrawl.savorcare.com",
-        help="Your Firecrawl API url for self hosted server. official: https://api.firecrawl.dev.",
+        placeholder="http://host.docker.internal:3032",
+        value="https://firecrawl.savorcare.com",
+        help="Your Firecrawl API url for self hosted server. official: https://api.firecrawl.dev. local: http://firecrawl:3002",
     )
 
     st.sidebar.markdown("### Research Parameters")
@@ -51,6 +53,14 @@ def setup_sidebar() -> Dict[str, Any]:
         help="Maximum number of URLs to explore during research. Higher values may provide more information but take longer.",
     )
 
+    searx_cat = st.sidebar.text_input(
+        "Enter search catigory for SearXNG",
+        type="default",
+        placeholder="news,social+media",
+        value="general,science",
+        help="general,science,it,news,social+media,images,map,music,videos,files",
+    )
+
     st.sidebar.markdown("---")
     st.sidebar.markdown(
         """
@@ -69,6 +79,7 @@ def setup_sidebar() -> Dict[str, Any]:
         "timeout_limit": timeout_limit,
         "max_urls": max_urls,
         "api_url": api_url,
+        "searx_cat": searx_cat,
     }
 
 
